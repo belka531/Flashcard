@@ -1,15 +1,14 @@
 const cards = [
     {
-        question: "What does DOM stand for?",
-        answer: "Document object Model"
+        question: "What does CSS stand for?",
+        answer: "Cascading Style Sheet"
     },
     {
-        question: "Why DOM?",
-        answer: "To manipulate HTML elements & make the webpage responsive."
+        question: "Why CSS?",
+        answer: "To style your page. Make your page visually beautiful."
     },
     {
-        question: "What is developer tools?",
-        answer: "Tools built in browser that helps to inspect a page, find and fix issues directly."
+        
     }];
 
 let q = document.getElementById("question");
