@@ -14,6 +14,7 @@ const cards = [
 
 let q = document.getElementById("question");
 let a = document.getElementById("answer");
+//let chosenCardIndex = 0;
 
 const showCard = function(card) {
     q.innerText = card["question"];
@@ -57,4 +58,41 @@ const addNewCard = function(){
     console.log(cards);
 };
 document.getElementById("onclick-button2").addEventListener("click", addNewCard, false);
+
+// for (let index=0; index <=cards.length-1; index++) {
+
+    
+//     if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
+//         chosenCardIndex =index;
+//     }
+// }
+
+// const deleteCard = function() {
+//     cards.splice(chosenCardIndex, 1);
+//     if (cards.length == 0) {
+//       alert("NO CARDS LEFT");
+//     } else {
+//       nextCard();
+//     }
+// };
+
+const deleteCard = function() {
+    for (let index=0; index <=cards.length-1; index++) {
+        if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
+                chosenCardIndex =index;
+                cards.splice(chosenCardIndex, 1);
+                if (cards.length == 0) {
+                    alert("NO CARDS LEFT");
+                } else {
+                    nextCard();
+                }
+        }
+    }
+
+};
+
+
+    
+
+document.getElementById("onclick-button3").addEventListener("click",deleteCard,false);
 document.addEventListener('DOMContentLoaded', fn, false);
