@@ -1,20 +1,18 @@
 const cards = [
     {
-        question: "What does DOM stand for?",
-        answer: "Document object Model"
+        question: "What does CSS stand for?",
+        answer: "Cascading Style Sheet"
     },
     {
-        question: "Why DOM?",
-        answer: "To manipulate HTML elements & make the webpage responsive."
+        question: "Why CSS?",
+        answer: "To style your page. Make your page visually beautiful."
     },
     {
-        question: "What is developer tools?",
-        answer: "Tools built in browser that helps to inspect a page, find and fix issues directly."
+        
     }];
 
 let q = document.getElementById("question");
 let a = document.getElementById("answer");
-//let chosenCardIndex = 0;
 
 const showCard = function(card) {
     q.innerText = card["question"];
@@ -58,41 +56,4 @@ const addNewCard = function(){
     console.log(cards);
 };
 document.getElementById("onclick-button2").addEventListener("click", addNewCard, false);
-
-// for (let index=0; index <=cards.length-1; index++) {
-
-    
-//     if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
-//         chosenCardIndex =index;
-//     }
-// }
-
-// const deleteCard = function() {
-//     cards.splice(chosenCardIndex, 1);
-//     if (cards.length == 0) {
-//       alert("NO CARDS LEFT");
-//     } else {
-//       nextCard();
-//     }
-// };
-
-const deleteCard = function() {
-    for (let index=0; index <=cards.length-1; index++) {
-        if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
-                chosenCardIndex =index;
-                cards.splice(chosenCardIndex, 1);
-                if (cards.length == 0) {
-                    alert("NO CARDS LEFT");
-                } else {
-                    nextCard();
-                }
-        }
-    }
-
-};
-
-
-    
-
-document.getElementById("onclick-button3").addEventListener("click",deleteCard,false);
 document.addEventListener('DOMContentLoaded', fn, false);

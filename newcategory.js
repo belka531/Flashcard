@@ -1,20 +1,23 @@
+
+var inputElement = document.getElementById('newcategory');
+var theirInput = '';
+inputElement.addEventListener('change', function(e) {
+  theirInput = e.target.value; 
+}); 
+
+
+
 const cards = [
     {
-        question: "What does DOM stand for?",
-        answer: "Document object Model"
+        question: " ",
+        answer: " "
     },
     {
-        question: "Why DOM?",
-        answer: "To manipulate HTML elements & make the webpage responsive."
-    },
-    {
-        question: "What is developer tools?",
-        answer: "Tools built in browser that helps to inspect a page, find and fix issues directly."
+        
     }];
 
 let q = document.getElementById("question");
 let a = document.getElementById("answer");
-//let chosenCardIndex = 0;
 
 const showCard = function(card) {
     q.innerText = card["question"];
@@ -58,41 +61,4 @@ const addNewCard = function(){
     console.log(cards);
 };
 document.getElementById("onclick-button2").addEventListener("click", addNewCard, false);
-
-// for (let index=0; index <=cards.length-1; index++) {
-
-    
-//     if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
-//         chosenCardIndex =index;
-//     }
-// }
-
-// const deleteCard = function() {
-//     cards.splice(chosenCardIndex, 1);
-//     if (cards.length == 0) {
-//       alert("NO CARDS LEFT");
-//     } else {
-//       nextCard();
-//     }
-// };
-
-const deleteCard = function() {
-    for (let index=0; index <=cards.length-1; index++) {
-        if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
-                chosenCardIndex =index;
-                cards.splice(chosenCardIndex, 1);
-                if (cards.length == 0) {
-                    alert("NO CARDS LEFT");
-                } else {
-                    nextCard();
-                }
-        }
-    }
-
-};
-
-
-    
-
-document.getElementById("onclick-button3").addEventListener("click",deleteCard,false);
 document.addEventListener('DOMContentLoaded', fn, false);
