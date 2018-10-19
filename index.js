@@ -59,23 +59,6 @@ const addNewCard = function(){
 };
 document.getElementById("onclick-button2").addEventListener("click", addNewCard, false);
 
-// for (let index=0; index <=cards.length-1; index++) {
-
-    
-//     if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
-//         chosenCardIndex =index;
-//     }
-// }
-
-// const deleteCard = function() {
-//     cards.splice(chosenCardIndex, 1);
-//     if (cards.length == 0) {
-//       alert("NO CARDS LEFT");
-//     } else {
-//       nextCard();
-//     }
-// };
-
 const deleteCard = function() {
     for (let index=0; index <=cards.length-1; index++) {
         if (q.innerText == cards[index]["question"]&& a.innerText ==cards[index]["answer"]) {
@@ -95,4 +78,9 @@ const deleteCard = function() {
     
 
 document.getElementById("onclick-button3").addEventListener("click",deleteCard,false);
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', fn, false);
