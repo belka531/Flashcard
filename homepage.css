@@ -16,6 +16,12 @@
 
 }
 
+#but3{
+    margin: 100px;
+    border: 5px solid rgb(180, 17, 17);
+
+}
+
 body{
     text-align: center;
 }
