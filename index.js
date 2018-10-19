@@ -1,14 +1,14 @@
 const cards = [
     {
-        question: "aaaa",
+        question: "question A",
         answer: "1111"
     },
     {
-        question: "bbbb",
+        question: "question B",
         answer: "2222"
     },
     {
-        question: "cccc",
+        question: "question C",
         answer: "3333"
     }];
 
@@ -57,4 +57,14 @@ const addNewCard = function(){
     console.log(cards);
 };
 document.getElementById("onclick-button2").addEventListener("click", addNewCard, false);
-document.addEventListener('DOMContentLoaded', fn, false);
+
+const deleteCard = function(){
+    let getindex = nextCard.i;
+    cards.splice(getindex,1);
+    console.log(cards);
+    nextCard();
+    console.log(cards);
+};
+
+document.getElementById("del-card-button").addEventListener("click", deleteCard,false);
+
